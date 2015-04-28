@@ -472,7 +472,7 @@
         
         
         
-        viewproductVCobj.thisProduct = [arrayMyDeals objectAtIndex:indexPath.item];
+        viewproductVCobj.thisProduct = [arrayRecentDeals objectAtIndex:indexPath.item];
         
         
         

@@ -48,7 +48,7 @@
 	// Do any additional setup after loading the view.
     
     
-    
+    tableViewCartList.hidden=YES;
     
 }
 
@@ -75,6 +75,7 @@
     
     if (arrayPopulateTable) {
         
+        tableViewCartList.hidden=NO;
         
         [tableViewCartList reloadData];
         
@@ -128,8 +129,21 @@
                 
                 arrayPopulateTable    =   [[ProductOrganizer convertServerArrayToModelProductArray:jsonArray] mutableCopy];
                 
-                
-                [tableViewCartList reloadData];
+                if (arrayPopulateTable.count) {
+                    
+                    tableViewCartList.hidden=NO;
+                    
+                    [tableViewCartList reloadData];
+                    
+                    
+                }else{
+                    
+                    
+                    tableViewCartList.hidden=YES;
+                    
+                    [InterfaceManager DisplayAlertWithMessage:@"No items to display"];
+                    
+                }
                 
                 
                 
@@ -384,6 +398,8 @@
         
         
         ContactsViewController *contactsCobj  =   [self.storyboard instantiateViewControllerWithIdentifier:@"contactview"];
+        
+        contactsCobj.arrayCartItems = arrayPopulateTable;
         
         
         [self presentViewController:contactsCobj animated:YES completion:nil];

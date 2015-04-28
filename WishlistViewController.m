@@ -36,7 +36,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    
+    tableViewWishList.hidden=YES;
 }
 -(void)viewWillAppear:(BOOL)animated
 {
@@ -83,8 +83,25 @@
             
             
           arrayPopultateTable =  [[ProductOrganizer convertServerArrayToModelProductArray:arrayProducts] copy];
-                      
-            [tableViewWishList reloadData];
+            
+            if (arrayPopultateTable.count) {
+                
+                
+                tableViewWishList.hidden=NO;
+                
+                
+                [tableViewWishList reloadData];
+                
+                
+            }else{
+                
+                
+                tableViewWishList.hidden=YES;
+                
+                [InterfaceManager DisplayAlertWithMessage:@"No items to display"];
+                
+            }
+
         }
         
         
@@ -117,7 +134,7 @@
     if (arrayPopultateTable) {
         
         
-        //ANythig????
+        tableViewWishList.hidden=NO;
         
         
         [tableViewWishList reloadData];

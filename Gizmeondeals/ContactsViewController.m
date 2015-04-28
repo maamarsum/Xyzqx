@@ -13,7 +13,7 @@
 #import "DefineMainValues.h"
 #import "DefineServerLinks.h"
 #import "CredentialManager.h"
-#import "AppDelegate.h"
+#import "OrderdetailViewController.h"
 
 
 @interface ContactsViewController ()
@@ -314,6 +314,13 @@ CGRect scrollViewDefaultFrame;
 - (IBAction)ActionNext:(id)sender {
     
     
+    OrderdetailViewController * vc = [self.storyboard instantiateViewControllerWithIdentifier:@"orderDetails"];
+    
+    
+    vc.shippingDetails = shippingDetails;
+    vc.arrayCartItems = self.arrayCartItems;
+    
+    [self presentViewController:vc animated:YES completion:nil];
     
     
 }

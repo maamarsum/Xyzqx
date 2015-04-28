@@ -29,7 +29,7 @@
     UINib* nib = [UINib nibWithNibName:NSStringFromClass([self class]) bundle:[NSBundle mainBundle]];
     [nib instantiateWithOwner:self options:nil];
     
-    self.view.frame = self.frame;
+    self.view.frame = self.bounds;
     
     [self addSubview:self.view];
     
@@ -42,7 +42,7 @@
     
     CGRect thisFrame = self.frame;
     
-    CGRect nextFrame = CGRectMake(thisFrame.origin.x, thisFrame.origin.y+thisFrame.size.height, thisFrame.size.height, thisFrame.size.width)
+    CGRect nextFrame = CGRectMake(thisFrame.origin.x, thisFrame.origin.y+thisFrame.size.height, thisFrame.size.width, thisFrame.size.height)
     ;
     
     

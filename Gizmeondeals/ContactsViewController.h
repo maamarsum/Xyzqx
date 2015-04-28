@@ -28,4 +28,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *buttonNext;
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollViewMain;
 
+
+@property(nonatomic,strong) NSArray * arrayCartItems;
+
 @end
