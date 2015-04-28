@@ -12,6 +12,9 @@
 #import "SectionHeaderView.h"
 #import "SlideNavigationController.h"
 @interface ProductViewController : UIViewController<UITextFieldDelegate,UITableViewDelegate,UITableViewDataSource,SectionHeaderViewDelegate,UIScrollViewDelegate,SlideNavigationControllerDelegate>
+{
+    NSInteger animatedindex;
+}
 @property (strong, nonatomic) IBOutlet UILabel *lbname;
 @property (strong, nonatomic) IBOutlet UILabel *labelDescription;
 @property (strong, nonatomic) IBOutlet UILabel *lbrating;
@@ -46,7 +49,7 @@
 @property (strong,nonatomic) BinSystemsServerConnectionHandler * AuthenticationServer;
 
 @property (strong,nonatomic) NSString *getproduct_id;
-
+@property(strong,nonatomic)NSArray *labelanimationarray;
 - (IBAction)buttonActionBack:(id)sender;
 
 

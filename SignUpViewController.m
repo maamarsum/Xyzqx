@@ -245,7 +245,7 @@ NSString *countryID,*zoneID;
          
                                                                FailBlock:^(NSString *Error) {
                                                                    
-                                                                   [InterfaceManager DisplayAlertWithMessage:@"Invalid Response, Entered into Fail Block"];
+                                                                   [InterfaceManager DisplayAlertWithMessage:@"Your net connection is too slow"];
                                                                    
                                                                    
                                                                }];

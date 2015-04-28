@@ -109,7 +109,7 @@
         
         return NO;
     }
-    if ([product.productPrice isKindOfClass:[NSNull class]]) {
+    if ([[NSString stringWithFormat:@"%ld",(long)product.productPrice] isKindOfClass:[NSNull class]]) {
         
         return NO;
     }

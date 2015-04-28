@@ -27,7 +27,9 @@
 @property (strong, nonatomic) IBOutlet UICollectionView *collectionViewMyDeals;
 @property (strong, nonatomic) IBOutlet UIView *bgview;
 
+@property (strong, nonatomic) IBOutlet UIView *viewRecentdeals;
 
+@property (strong, nonatomic) IBOutlet UIView *viewMyDeals;
 
 
 

@@ -76,7 +76,7 @@
     [self loaddatatotable];
     
     
-    [lbname setFont:[UIFont boldSystemFontOfSize:20]];
+    [lbname setFont:[UIFont boldSystemFontOfSize:15]];
     [lbrating setFont:[UIFont boldSystemFontOfSize:30]];
     [reviewrating setFont:[UIFont boldSystemFontOfSize:40]];
     [expandview setHidden:YES];
@@ -89,12 +89,13 @@
     
     
     
-   
     
+    //NSTimer*   timer=[NSTimer scheduledTimerWithTimeInterval:2.0 target:self selector:@selector(performTransition) userInfo:nil repeats:YES];
     
-    imageViewProductImage.layer.borderWidth=2;
-    imageViewProductImage.layer.cornerRadius=2;
-    imageViewProductImage.layer.borderColor=[UIColor blackColor].CGColor;
+//    
+//    imageViewProductImage.layer.borderWidth=2;
+//    imageViewProductImage.layer.cornerRadius=2;
+//    imageViewProductImage.layer.borderColor=[UIColor blackColor].CGColor;
     didTappedBuy = false;
     
     
@@ -188,13 +189,27 @@
         product = thisProduct;
         
         
-        lbprice.text =  product.productPrice;
-        NSLog(@"price %@",product.productPrice);
         lbname.text = product.productName;
-        lbspecialprice.text=product.productSpecilaprice;
-        textViewQuantity.text=product.productQuantity;
+        
+        lbprice.text =  [NSString stringWithFormat:@"%.2f",[product.productPrice floatValue]];
+        
+        lbspecialprice.text=[NSString stringWithFormat:@"%.2f",[product.productSpecilaprice floatValue]];
+        
         textviewfield.text =  product.productDescription;
-        lbAvailability.text =  @"out of stock";
+        
+        if (product.productQuantity == 0) {
+            //lbAvailability.text =  @"out of stock";
+            _labelanimationarray=[[NSMutableArray alloc]initWithObjects:@"out of stock", nil];
+        }
+        else
+        {
+            _labelanimationarray=[[NSMutableArray alloc]initWithObjects:@"Available", nil];
+           // [self addanimation];
+
+        }
+        
+        
+        
         lbrating.text =  @"****";
         reviewrating.text =  @"****";
          NSLog(@"desscription %@",product.productDescription);
@@ -206,7 +221,7 @@
         
         if (product.productImage==nil) {
             
-            imageViewProductImage.image = [UIImage imageNamed:@"Men_at_work.png"];
+            imageViewProductImage.image = [UIImage imageNamed:@""];
             
             
             dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
@@ -265,8 +280,39 @@
         
         
     }
+    [self addanimation];
+    
+}
+-(void)addanimation
+{
+    animatedindex=0;
+    lbAvailability.text=[_labelanimationarray objectAtIndex:animatedindex];
+    NSTimer*   timer=[NSTimer scheduledTimerWithTimeInterval:5.0 target:self selector:@selector(performTransition) userInfo:nil repeats:YES];
 }
 
+-(void)performTransition{
+    
+    lbAvailability.text=[_labelanimationarray objectAtIndex:animatedindex];
+    
+    
+    CATransition *transition = [CATransition animation];
+    transition.duration = 0.25;
+    transition.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut];
+    
+    
+    
+    transition.type=kCATransitionPush;
+    transition.subtype=kCATransitionFade;
+    
+    transition.delegate = self;
+    
+    [lbAvailability.layer addAnimation:transition forKey:nil];
+    animatedindex++;
+    if (animatedindex==[_labelanimationarray count]) {
+        animatedindex=0;
+    }
+
+}
     -(void)dismissKeyBoard{
         [textViewQuantity resignFirstResponder];
         [textviewreview resignFirstResponder];
@@ -922,6 +968,25 @@
         
         [self.navigationController popViewControllerAnimated:NO];
     }
+
+
+-(IBAction)shareButtonAction:(id)sender {
     
+    
+    ModelProduct * product = [ModelProduct new];
+      product = thisProduct;
+    
+    
+   // NSString *nameToShare = product.productName;
+    
+    NSURL * imgUrl =[NSURL URLWithString:[@"http://talenweave.com/qatardeals2/index.php?route=product/product&product_id=" stringByAppendingString:product.productId]];
+    
+    NSLog(@"website %@",imgUrl);
+   // NSString *priceToShare = product.productPrice;
+    NSArray *itemsToShare = @[imgUrl];
+    UIActivityViewController *activityVC = [[UIActivityViewController alloc] initWithActivityItems:itemsToShare applicationActivities:nil];
+    activityVC.excludedActivityTypes = @[UIActivityTypePrint, UIActivityTypeCopyToPasteboard, UIActivityTypeAssignToContact, UIActivityTypeSaveToCameraRoll]; //or whichever you don't need
+    [self presentViewController:activityVC animated:YES completion:nil];
+}
 
     @end

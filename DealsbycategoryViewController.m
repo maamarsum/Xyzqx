@@ -19,6 +19,7 @@
 #import "ModelProduct.h"
 #import "InterfaceManager.h"
 
+
 //vc//
 #import "ProductViewController.h"
 #import "ModelProduct.h"
@@ -275,7 +276,7 @@
         
     } FailBlock:^(NSString *Error) {
         
-        [InterfaceManager DisplayAlertWithMessage:@"Invalid Response, Entered into Fail Block"];
+        [InterfaceManager DisplayAlertWithMessage:@"Your net connection is too slow"];
         
         
     }];
@@ -349,7 +350,7 @@
         
            cellForDealsList.name.text =  productdetails.productName;
         //cellForDealsList.price.text=@"10";
-        cellForDealsList.price.text = productdetails.productPrice;
+        cellForDealsList.price.text = [NSString stringWithFormat:@"%.2f",[productdetails.productPrice floatValue]];
         cellForDealsList.model.text = productdetails.productModel;
         
         
@@ -358,7 +359,7 @@
            cellForDealsList.image.image = [UIImage imageNamed:@"Men_at_work.png"];
             //Pending
             
-            dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+           // dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
                 
                 
                 ModelProduct * tempProduct = [arrayForPopulateTable objectAtIndex:indexPath.row];
@@ -395,7 +396,7 @@
                 
                 
                 
-            });
+           
             
             
             
@@ -405,7 +406,9 @@
             
             cellForDealsList.image.image = productdetails.productImage;
             
-         
+         cellForDealsList.imageView.contentMode=UIViewContentModeScaleAspectFill;
+            
+            
             
         }
         
@@ -439,6 +442,7 @@
         
     }
     if (tableView == tableFilterFinalSelection) {
+        
         
         UITableViewCell * cellFilterFinalCategory = [tableView dequeueReusableCellWithIdentifier:@"cellFilterFinalCategory" forIndexPath:indexPath];
         
@@ -535,7 +539,7 @@
     //UILabel * labelProductModel = (UILabel *)[cellForRecentDeals viewWithTag:104];
         
         labelProductName.text = productDetails.productName;
-        labelProductPrice.text = productDetails.productPrice;
+        labelProductPrice.text = [NSString stringWithFormat:@"%.2f",[productDetails.productPrice floatValue]];
     //labelProductModel.text = productDetails.productModel;
         
         if (productDetails.productImage==nil) {

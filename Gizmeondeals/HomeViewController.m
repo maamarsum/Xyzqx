@@ -43,7 +43,7 @@
 @end
 
 @implementation HomeViewController
-@synthesize AuthenticationServer,FeederUserObject,Scrollview,collectionViewRecentDeals,collectionViewMyDeals,bgview;
+@synthesize AuthenticationServer,FeederUserObject,Scrollview,collectionViewRecentDeals,collectionViewMyDeals,bgview,viewMyDeals,viewRecentdeals;
 
 
 
@@ -53,9 +53,15 @@
     
    
     
+    viewRecentdeals.layer.cornerRadius = 5;
+    viewRecentdeals.layer.masksToBounds = YES;
+    viewMyDeals.layer.cornerRadius = 5;
+    viewMyDeals.layer.masksToBounds = YES;
     [self loadContentsToView];
     
   //  int screenHeight=[[UIScreen mainScreen]bounds].size.height;
+    
+    
     
     bgview.backgroundColor=[UIColor orangeColor];
 
@@ -184,7 +190,7 @@
         
     } FailBlock:^(NSString *Error) {
         
-        [InterfaceManager DisplayAlertWithMessage:@"Invalid Response, Entered into Fail Block"];
+        [InterfaceManager DisplayAlertWithMessage:@"Your net connection is too slow"];
         
         
     }];
@@ -237,6 +243,7 @@
                     product.productImageUrl=[productDetails valueForKey:@"image"];
                     product.productDescription=[productDetails valueForKey:@"description"];
                     product.productSpecilaprice=[productDetails valueForKey:@"special"];
+                    product.productQuantity=[productDetails valueForKey:@"quantity"];
                    // NSLog(@"description %@",product.productDescription);
                     
                     [arrayMyDeals addObject:product];
@@ -263,7 +270,7 @@
         
     } FailBlock:^(NSString *Error) {
         
-        [InterfaceManager DisplayAlertWithMessage:@"Invalid Response, Entered into Fail Block"];
+        [InterfaceManager DisplayAlertWithMessage:@"Your net connection is too slow"];
         
         
     }];
@@ -322,14 +329,14 @@
         
         
         labelProductName.text = productDetails.productName;
-        labelProductPrice.text = productDetails.productPrice;
+        labelProductPrice.text =[NSString stringWithFormat:@"%.2f",[productDetails.productPrice floatValue]];//productDetails.productPrice;
         
         if (productDetails.productImage==nil) {
             
-            imageViewProductImage.image = [UIImage imageNamed:@"Men_at_work.png"];
+            imageViewProductImage.image = [UIImage imageNamed:@""];
             //Pending
             
-            dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+           // dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
                 
                 
                 ModelProduct * tempProduct = [arrayRecentDeals objectAtIndex:indexPath.item];
@@ -363,7 +370,7 @@
                 
                 
                 
-            });
+            
 
             
             
@@ -371,6 +378,7 @@
         }else{
             
             imageViewProductImage.image = productDetails.productImage;
+            
             
             
             
@@ -395,11 +403,11 @@
         
         
         labelProductName.text = productDetails.productName;
-        labelProductPrice.text = productDetails.productPrice;
+        labelProductPrice.text =[NSString stringWithFormat:@"%.2f",[productDetails.productPrice floatValue]];
         
         if (productDetails.productImage==nil) {
             
-            imageViewProductImage.image = [UIImage imageNamed:@"Men_at_work.png"];
+            imageViewProductImage.image = [UIImage imageNamed:@""];
            
             
             dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{

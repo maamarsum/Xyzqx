@@ -76,10 +76,12 @@ static TabBarController * instance;
     
     
     tabBarItem1.title = @"Home";
-   tabBarItem2.title = @"My Cart";
+    tabBarItem2.title = @"My Cart";
     tabBarItem3.title = @"WishList";
-   tabBarItem4.title = @"Account";
+    tabBarItem4.title = @"Account";
     tabBarItem5.title = @"More";
+    
+   
     
     
     UIImage *image11= [UIImage imageNamed:@"myhomeicon"];
@@ -139,9 +141,12 @@ static TabBarController * instance;
  }
 - (void)viewDidLayoutSubviews
 {
-    CGFloat tabBarHeight = 67.0;
+    CGFloat tabBarHeight = 50.0;
     CGRect frame = self.view.frame;
     self.tabBar.frame = CGRectMake(0, frame.size.height - tabBarHeight, frame.size.width, tabBarHeight);
+    [[UITabBarItem appearance] setTitleTextAttributes:@{ NSForegroundColorAttributeName : [UIColor blackColor] }
+                                             forState:UIControlStateNormal];
+
 }
 - (void)didReceiveMemoryWarning
 {

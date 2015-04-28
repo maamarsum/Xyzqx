@@ -74,7 +74,23 @@
    
     
 }
+-(IBAction)ButtonInformation:(id)sender{
+    
+    MyordersViewController *myordervCobj  =   [self.storyboard instantiateViewControllerWithIdentifier:@"informationview"];
+    
+    
+    [self presentViewController:myordervCobj animated:YES completion:nil];
+    
+}
 
+-(IBAction)ButtonContactUs:(id)sender{
+    
+    MyordersViewController *myordervCobj  =   [self.storyboard instantiateViewControllerWithIdentifier:@"contactusview"];
+    
+    
+    [self presentViewController:myordervCobj animated:YES completion:nil];
+    
+}
 
 
 
