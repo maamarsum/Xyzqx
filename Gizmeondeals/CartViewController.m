@@ -16,6 +16,8 @@
 #import "ProductViewController.h"
 #import "ProductOrganizer.h"
 #import "CredentialManager.h"
+#import "ContactsViewController.h"
+#import "LoginViewController.h"
 
 @interface CartViewController (){
     
@@ -376,6 +378,31 @@
 
 
 - (IBAction)actionProceedToPay:(id)sender {
+    
+    
+    if ([CredentialManager FetchCredentailsSavedOffline]) {
+        
+        
+        ContactsViewController *contactsCobj  =   [self.storyboard instantiateViewControllerWithIdentifier:@"contactview"];
+        
+        
+        [self presentViewController:contactsCobj animated:YES completion:nil];
+        
+    }else{
+        
+        LoginViewController *VC = [self.storyboard instantiateViewControllerWithIdentifier:@"loginview"];
+        
+        
+        
+        [self.navigationController presentViewController:VC animated:YES completion:nil];
+        
+       // didTappedBuy=true;
+        
+    }
+
+    
+    
+    
     
 }
 @end

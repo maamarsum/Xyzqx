@@ -90,7 +90,6 @@
 		9F4738861ABADEC700BA0EEB /* MyordersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F4738851ABADEC700BA0EEB /* MyordersViewController.m */; };
 		9F4CB0941ADF8E0200F3BB3C /* back_arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F4CB0931ADF8E0200F3BB3C /* back_arrow.png */; };
 		9F632B771AD3D43600B25450 /* slidebackground.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9F632B761AD3D43600B25450 /* slidebackground.jpg */; };
-		9F99B5041AE9137200C2F7B6 /* Main-iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F99B5031AE9137200C2F7B6 /* Main-iPad.storyboard */; };
 		9FD0D16F1AB8441C003F4F2C /* MoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FD0D16E1AB8441C003F4F2C /* MoreViewController.m */; };
 		9FD0D2031AB94CA6003F4F2C /* SlideNavigationContorllerAnimatorFade.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FD0D1FA1AB94CA6003F4F2C /* SlideNavigationContorllerAnimatorFade.m */; };
 		9FD0D2041AB94CA6003F4F2C /* SlideNavigationContorllerAnimatorScale.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FD0D1FC1AB94CA6003F4F2C /* SlideNavigationContorllerAnimatorScale.m */; };
@@ -100,6 +99,8 @@
 		9FD0D20A1AB94CB6003F4F2C /* SlideNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FD0D2091AB94CB6003F4F2C /* SlideNavigationController.m */; };
 		9FD0D2191AB94CF7003F4F2C /* LeftMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FD0D2101AB94CF6003F4F2C /* LeftMenuViewController.m */; };
 		9FDC19161ADD3427004E4AD5 /* delete_trash.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FDC19151ADD3427004E4AD5 /* delete_trash.png */; };
+		9FECAE801AEF57AB003C273A /* OrderSummaryReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9FECAE7F1AEF57AB003C273A /* OrderSummaryReusableView.xib */; };
+		9FECAE831AEF57CB003C273A /* OrderSummaryReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FECAE821AEF57CB003C273A /* OrderSummaryReusableView.m */; };
 		9FF628301AE4CBDF000DA334 /* KLCPopup.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FF6282F1AE4CBDF000DA334 /* KLCPopup.m */; };
 		9FF628331AE4CDE9000DA334 /* ViewSelectCountryNLanguage.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FF628321AE4CDE9000DA334 /* ViewSelectCountryNLanguage.m */; };
 		9FF628351AE4CE23000DA334 /* ViewSelectCountryNLanguage.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9FF628341AE4CE23000DA334 /* ViewSelectCountryNLanguage.xib */; };
@@ -251,7 +252,6 @@
 		9F4738851ABADEC700BA0EEB /* MyordersViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyordersViewController.m; sourceTree = "<group>"; };
 		9F4CB0931ADF8E0200F3BB3C /* back_arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back_arrow.png; sourceTree = "<group>"; };
 		9F632B761AD3D43600B25450 /* slidebackground.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = slidebackground.jpg; sourceTree = "<group>"; };
-		9F99B5031AE9137200C2F7B6 /* Main-iPad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = "Main-iPad.storyboard"; path = "Gizmeondeals/Main-iPad.storyboard"; sourceTree = "<group>"; };
 		9FD0D16D1AB8441C003F4F2C /* MoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MoreViewController.h; path = ../MoreViewController.h; sourceTree = "<group>"; };
 		9FD0D16E1AB8441C003F4F2C /* MoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MoreViewController.m; path = ../MoreViewController.m; sourceTree = "<group>"; };
 		9FD0D1F81AB94CA6003F4F2C /* SlideNavigationContorllerAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SlideNavigationContorllerAnimator.h; sourceTree = "<group>"; };
@@ -270,6 +270,9 @@
 		9FD0D20F1AB94CF6003F4F2C /* LeftMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftMenuViewController.h; sourceTree = "<group>"; };
 		9FD0D2101AB94CF6003F4F2C /* LeftMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftMenuViewController.m; sourceTree = "<group>"; };
 		9FDC19151ADD3427004E4AD5 /* delete_trash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = delete_trash.png; sourceTree = "<group>"; };
+		9FECAE7F1AEF57AB003C273A /* OrderSummaryReusableView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OrderSummaryReusableView.xib; sourceTree = "<group>"; };
+		9FECAE811AEF57CB003C273A /* OrderSummaryReusableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderSummaryReusableView.h; sourceTree = "<group>"; };
+		9FECAE821AEF57CB003C273A /* OrderSummaryReusableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderSummaryReusableView.m; sourceTree = "<group>"; };
 		9FF6282E1AE4CBDF000DA334 /* KLCPopup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KLCPopup.h; sourceTree = "<group>"; };
 		9FF6282F1AE4CBDF000DA334 /* KLCPopup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KLCPopup.m; sourceTree = "<group>"; };
 		9FF628311AE4CDE9000DA334 /* ViewSelectCountryNLanguage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ViewSelectCountryNLanguage.h; path = Gizmeondeals/ViewSelectCountryNLanguage.h; sourceTree = "<group>"; };
@@ -350,7 +353,6 @@
 				B9B2F63E1A9C925D004B40D2 /* AppGlobalVariables.h */,
 				B9B2F63F1A9C925D004B40D2 /* AppGlobalVariables.m */,
 				3318D6441A70C493003B60D6 /* Main.storyboard */,
-				9F99B5031AE9137200C2F7B6 /* Main-iPad.storyboard */,
 				3318D7541A7CDA05003B60D6 /* TabBarController.h */,
 				3318D7551A7CDA05003B60D6 /* TabBarController.m */,
 				3318D5EC1A70B5F4003B60D6 /* AppDelegate.h */,
@@ -578,6 +580,9 @@
 		3318D73B1A79F93F003B60D6 /* views+xib */ = {
 			isa = PBXGroup;
 			children = (
+				9FECAE7F1AEF57AB003C273A /* OrderSummaryReusableView.xib */,
+				9FECAE811AEF57CB003C273A /* OrderSummaryReusableView.h */,
+				9FECAE821AEF57CB003C273A /* OrderSummaryReusableView.m */,
 				9FF628311AE4CDE9000DA334 /* ViewSelectCountryNLanguage.h */,
 				9FF628321AE4CDE9000DA334 /* ViewSelectCountryNLanguage.m */,
 				9FF628341AE4CE23000DA334 /* ViewSelectCountryNLanguage.xib */,
@@ -787,6 +792,7 @@
 				B9D6CCCF1AB6D8D600DF9508 /* karticon.png in Resources */,
 				9F47387A1ABADB7E00BA0EEB /* call.png in Resources */,
 				3318D7691A7F465B003B60D6 /* home.png in Resources */,
+				9FECAE801AEF57AB003C273A /* OrderSummaryReusableView.xib in Resources */,
 				3364EF061AC9725A00E9635A /* Default.png in Resources */,
 				3364EF031AC9722600E9635A /* Default-667h@2x.png in Resources */,
 				3318D7591A7CDAE6003B60D6 /* horse.png in Resources */,
@@ -809,7 +815,6 @@
 				9F4738811ABADB7E00BA0EEB /* lanqatar1.png in Resources */,
 				9F4738801ABADB7E00BA0EEB /* language.png in Resources */,
 				3318D7711A7F4BAE003B60D6 /* information.png in Resources */,
-				9F99B5041AE9137200C2F7B6 /* Main-iPad.storyboard in Resources */,
 				3318D7321A727631003B60D6 /* rightarrow.png in Resources */,
 				3318D5E81A70B5F4003B60D6 /* InfoPlist.strings in Resources */,
 				3364EF011AC96EFB00E9635A /* Icon-40@2x.png in Resources */,
@@ -855,6 +860,7 @@
 				3318D72F1A7275B2003B60D6 /* CategoryTableViewCell.m in Sources */,
 				3318D5EE1A70B5F4003B60D6 /* AppDelegate.m in Sources */,
 				3318D5EA1A70B5F4003B60D6 /* main.m in Sources */,
+				9FECAE831AEF57CB003C273A /* OrderSummaryReusableView.m in Sources */,
 				3364EEE81AC9374E00E9635A /* ReviewTableViewCell.m in Sources */,
 				3318D65E1A70C4DE003B60D6 /* ProductViewController.m in Sources */,
 				3318D6621A70C4DE003B60D6 /* MenuViewController.m in Sources */,

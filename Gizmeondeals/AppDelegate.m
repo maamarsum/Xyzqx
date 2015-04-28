@@ -160,9 +160,24 @@
     NSLog(@"Loading Menu items");
     
     
+    NSUserDefaults * pref = [NSUserDefaults standardUserDefaults];
+    
+  
+    
+    NSString * selectedLanguage = [pref valueForKey:@"selectedLanguage"];
+    
+    if (!selectedLanguage) {
+        
+        selectedLanguage = @"1";
+        
+        [pref setValue:selectedLanguage forKey:@"selectedLanguage"];
+        
+    }
+    
+    
   arrayMenuItems = [[NSArray alloc] init];
     
-    NSString *PostData = [NSString stringWithFormat:@"lan=%@",@"1"];
+    NSString *PostData = [NSString stringWithFormat:@"lan=%@",selectedLanguage];
     NSLog(@"Request: %@", PostData);
     
     

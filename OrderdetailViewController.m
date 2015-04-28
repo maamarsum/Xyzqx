@@ -7,10 +7,18 @@
 //
 
 #import "OrderdetailViewController.h"
+#import "BinSystemsServerConnectionHandler.h"
+#import "InterfaceManager.h"
+#import "DefineMainValues.h"
+#import "DefineServerLinks.h"
+#import "ProductOrganizer.h"
 
 @interface OrderdetailViewController ()
 
 @end
+
+NSArray * arrayProducts;
+CGRect frameForNextView;
 
 @implementation OrderdetailViewController
 
@@ -29,12 +37,84 @@
     // Do any additional setup after loading the view.
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
+-(void)fetchOrderSummery
+{
+    
+    
+    NSString *PostData = [NSString stringWithFormat:@"lan=%@",appLanguage];
+    NSLog(@"Request: %@", PostData);
+    
+    
+    BinSystemsServerConnectionHandler * AuthenticationServer  = [[BinSystemsServerConnectionHandler alloc]initWithURL:kServerLink_getcustomerkart PostData:PostData];
+    
+    
+    [AuthenticationServer StartServerConnectionWithCompletionHandler:@"POST":^(NSDictionary *JSONDict) {
+        
+        
+        
+        
+        
+        NSString * status = [JSONDict valueForKey:@"status"];
+        
+        
+        
+        if ([status isEqualToString:@"Success"]) {
+            
+            
+            
+            NSArray * jsonArray = [JSONDict valueForKey:@"data"];
+            
+            
+            arrayProducts    =   [[ProductOrganizer convertServerArrayToModelProductArray:jsonArray] mutableCopy];
+            
+
+            
+            
+            
+            
+            
+            
+            
+        }else{
+            
+            
+            
+            
+            
+            
+            
+        }
+        
+        
+        
+        
+        
+        
+        
+    } FailBlock:^(NSString *Error) {
+        
+        
+        
+        NSLog(@"error");
+        
+        
+        [InterfaceManager DisplayAlertWithMessage:@"Connection Lost"];
+        
+        
+        
+        
+        
+        
+    }];
+    
+
+    
+    
+    
+    
+    
+}
 /*
 #pragma mark - Navigation
 

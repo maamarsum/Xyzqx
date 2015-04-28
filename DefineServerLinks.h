@@ -67,3 +67,7 @@
 #define kServerLink_getCanceledOrders @"http://talenweave.com/qatardeals2/index.php?route=common/api/getCustomerCancelledOrders"
 
 #define kServerLink_ForgetPassword @"http://talenweave.com/qatardeals2/index.php?route=common/api/forgotPasswordMob"
+
+
+#define kServerLink_getShippingAddress @"http://talenweave.com/qatardeals2/index.php?route=common/api/getCustomerAddressMob"
+

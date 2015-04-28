@@ -89,12 +89,7 @@ NSString *countryID,*zoneID;
 
 }
 
--(void) textFieldDidBeginEditing:(UITextField *)textField
-{
-    
-    
-    
-}
+
 
 -(void) validateManditoryFields
     {
@@ -388,7 +383,14 @@ NSString *countryID,*zoneID;
     
     
 }
-
+-(BOOL) textFieldShouldEndEditing:(UITextField *)textField{
+    
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillHide:) name:UIKeyboardWillHideNotification object:nil];
+    
+    
+    return YES;
+}
 
 -(void) dismissKeyboard
 {

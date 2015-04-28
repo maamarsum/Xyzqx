@@ -18,6 +18,7 @@
 #import "BinSystemsAppManager.h"
 #import "DefineServerLinks.h"
 #import "InterfaceManager.h"
+#import "DefineMainValues.h"
 
 @interface MoreViewController ()
 {
@@ -58,6 +59,19 @@
     
     
     arrayLanguageList = [NSArray arrayWithObjects:English,Arabic, nil];
+    
+    NSString * lan = (NSString*) appLanguage;
+    
+    if ([lan isEqualToString:@"2"] ) {
+        
+        _labelSelectedLanguage.text = @"Arabic";
+    }else{
+        
+        
+        _labelSelectedLanguage.text = @"English";
+    }
+    
+   
     
 }
 
@@ -224,8 +238,15 @@
         
         
         _labelSelectedLanguage.text = [selectedValue valueForKey:@"name"];
+        
+        
+        NSUserDefaults * pref = [NSUserDefaults standardUserDefaults];
+        
+      
+        
+        [pref setObject:[selectedValue valueForKey:@"code"] forKey:@"selectedLanguage"];
 
-        [AppGlobalVariables sharedInstance].selectedLanguage =[selectedValue valueForKey:@"code"];
+        
         
     }
     

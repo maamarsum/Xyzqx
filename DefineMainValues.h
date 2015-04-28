@@ -13,6 +13,8 @@
 
 #define screenWidth  [UIScreen mainScreen].bounds.size.width
 
+#define appLanguage [[NSUserDefaults standardUserDefaults] valueForKey:@"selectedLanguage"]
+
 //Fonts
 
 

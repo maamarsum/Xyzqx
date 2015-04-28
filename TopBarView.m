@@ -62,6 +62,7 @@
     
     return self;
 }
+
 // //static TopBarView *instance=nil;
 //- (id) awakeAfterUsingCoder:(NSCoder*)aDecoder {
 //    

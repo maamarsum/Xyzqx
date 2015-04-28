@@ -82,7 +82,7 @@
             NSArray * arrayProducts = [data valueForKey:@"data"];
             
             
-          arrayPopultateTable =  [ProductOrganizer convertServerArrayToModelProductArray:arrayProducts];
+          arrayPopultateTable =  [[ProductOrganizer convertServerArrayToModelProductArray:arrayProducts] copy];
                       
             [tableViewWishList reloadData];
         }
@@ -291,10 +291,10 @@
             
             if (Result1) {
                 
-                NSString * msg = [Result1 valueForKey:@"message"];
+                NSString * msg = [Result1 valueForKey:@"status"];
                 
                 
-                if ([msg isEqualToString:@"Deleted"]) {
+                if ([msg isEqualToString:@"Success"]) {
                     
                     
                     
