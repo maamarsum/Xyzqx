@@ -278,6 +278,7 @@
         product.productPrice=[productDetails valueForKey:@"price"];
         product.productModel=[productDetails valueForKey:@"model"];
         product.productImageUrl=[productDetails valueForKey:@"image"];
+            product.productCartNumberOfItems = [[ productDetails valueForKey:@"quantity"] stringValue];
         
         [returnArray addObject:product];
         

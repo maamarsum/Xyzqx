@@ -64,12 +64,8 @@
 		3318D7D81A888D0F003B60D6 /* OrderdetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3318D7D71A888D0E003B60D6 /* OrderdetailViewController.m */; };
 		333C46751AE9FD0C0017A618 /* ContactusViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 333C46741AE9FD0C0017A618 /* ContactusViewController.m */; };
 		333C467D1AEA14A60017A618 /* myaccounticon.png in Resources */ = {isa = PBXBuildFile; fileRef = 333C46781AEA14A60017A618 /* myaccounticon.png */; };
-		333C467E1AEA14A60017A618 /* mycarticon.png in Resources */ = {isa = PBXBuildFile; fileRef = 333C46791AEA14A60017A618 /* mycarticon.png */; };
-		333C467F1AEA14A60017A618 /* myhomeicon.png in Resources */ = {isa = PBXBuildFile; fileRef = 333C467A1AEA14A60017A618 /* myhomeicon.png */; };
 		333C46801AEA14A60017A618 /* myoverflowicon.png in Resources */ = {isa = PBXBuildFile; fileRef = 333C467B1AEA14A60017A618 /* myoverflowicon.png */; };
 		333C46811AEA14A60017A618 /* mywishlisticon.png in Resources */ = {isa = PBXBuildFile; fileRef = 333C467C1AEA14A60017A618 /* mywishlisticon.png */; };
-		333D62801AEDF1B900A8960E /* grid.png in Resources */ = {isa = PBXBuildFile; fileRef = 333D627E1AEDF1B900A8960E /* grid.png */; };
-		333D62811AEDF1B900A8960E /* table.png in Resources */ = {isa = PBXBuildFile; fileRef = 333D627F1AEDF1B900A8960E /* table.png */; };
 		3364EEE81AC9374E00E9635A /* ReviewTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3364EEE61AC9374E00E9635A /* ReviewTableViewCell.m */; };
 		3364EEE91AC9374E00E9635A /* ReviewTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3364EEE71AC9374E00E9635A /* ReviewTableViewCell.xib */; };
 		3364EF001AC96EFB00E9635A /* Icon-40.png in Resources */ = {isa = PBXBuildFile; fileRef = 3364EEFE1AC96EFB00E9635A /* Icon-40.png */; };
@@ -105,6 +101,8 @@
 		9FDC19161ADD3427004E4AD5 /* delete_trash.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FDC19151ADD3427004E4AD5 /* delete_trash.png */; };
 		9FECAE801AEF57AB003C273A /* OrderSummaryReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9FECAE7F1AEF57AB003C273A /* OrderSummaryReusableView.xib */; };
 		9FECAE831AEF57CB003C273A /* OrderSummaryReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FECAE821AEF57CB003C273A /* OrderSummaryReusableView.m */; };
+		9FECAE861AF0AB4F003C273A /* mycarticon.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FECAE841AF0AB4F003C273A /* mycarticon.png */; };
+		9FECAE871AF0AB4F003C273A /* myhomeicon.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FECAE851AF0AB4F003C273A /* myhomeicon.png */; };
 		9FF628301AE4CBDF000DA334 /* KLCPopup.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FF6282F1AE4CBDF000DA334 /* KLCPopup.m */; };
 		9FF628331AE4CDE9000DA334 /* ViewSelectCountryNLanguage.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FF628321AE4CDE9000DA334 /* ViewSelectCountryNLanguage.m */; };
 		9FF628351AE4CE23000DA334 /* ViewSelectCountryNLanguage.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9FF628341AE4CE23000DA334 /* ViewSelectCountryNLanguage.xib */; };
@@ -123,8 +121,6 @@
 		B99F0E7B1AA0403500C575DE /* logo2.png in Resources */ = {isa = PBXBuildFile; fileRef = B99F0E7A1AA0403500C575DE /* logo2.png */; };
 		B9B2F6401A9C925D004B40D2 /* AppGlobalVariables.m in Sources */ = {isa = PBXBuildFile; fileRef = B9B2F63F1A9C925D004B40D2 /* AppGlobalVariables.m */; };
 		B9B2F6431A9CA566004B40D2 /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B9B2F6421A9CA566004B40D2 /* SignUpViewController.m */; };
-		B9D6CCCE1AB6D8D600DF9508 /* homeicon.png in Resources */ = {isa = PBXBuildFile; fileRef = B9D6CCC91AB6D8D600DF9508 /* homeicon.png */; };
-		B9D6CCCF1AB6D8D600DF9508 /* karticon.png in Resources */ = {isa = PBXBuildFile; fileRef = B9D6CCCA1AB6D8D600DF9508 /* karticon.png */; };
 		B9D6CCD01AB6D8D600DF9508 /* moreicon1.png in Resources */ = {isa = PBXBuildFile; fileRef = B9D6CCCB1AB6D8D600DF9508 /* moreicon1.png */; };
 		B9D6CCD11AB6D8D600DF9508 /* usericon.png in Resources */ = {isa = PBXBuildFile; fileRef = B9D6CCCC1AB6D8D600DF9508 /* usericon.png */; };
 		B9D6CCD21AB6D8D600DF9508 /* wishlisticon.png in Resources */ = {isa = PBXBuildFile; fileRef = B9D6CCCD1AB6D8D600DF9508 /* wishlisticon.png */; };
@@ -228,8 +224,6 @@
 		333C46731AE9FD0C0017A618 /* ContactusViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ContactusViewController.h; path = ../ContactusViewController.h; sourceTree = "<group>"; };
 		333C46741AE9FD0C0017A618 /* ContactusViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ContactusViewController.m; path = ../ContactusViewController.m; sourceTree = "<group>"; };
 		333C46781AEA14A60017A618 /* myaccounticon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = myaccounticon.png; sourceTree = "<group>"; };
-		333C46791AEA14A60017A618 /* mycarticon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mycarticon.png; sourceTree = "<group>"; };
-		333C467A1AEA14A60017A618 /* myhomeicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = myhomeicon.png; sourceTree = "<group>"; };
 		333C467B1AEA14A60017A618 /* myoverflowicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = myoverflowicon.png; sourceTree = "<group>"; };
 		333C467C1AEA14A60017A618 /* mywishlisticon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mywishlisticon.png; sourceTree = "<group>"; };
 		333D627E1AEDF1B900A8960E /* grid.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = grid.png; sourceTree = "<group>"; };
@@ -283,6 +277,8 @@
 		9FECAE7F1AEF57AB003C273A /* OrderSummaryReusableView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OrderSummaryReusableView.xib; sourceTree = "<group>"; };
 		9FECAE811AEF57CB003C273A /* OrderSummaryReusableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderSummaryReusableView.h; sourceTree = "<group>"; };
 		9FECAE821AEF57CB003C273A /* OrderSummaryReusableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderSummaryReusableView.m; sourceTree = "<group>"; };
+		9FECAE841AF0AB4F003C273A /* mycarticon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mycarticon.png; sourceTree = "<group>"; };
+		9FECAE851AF0AB4F003C273A /* myhomeicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = myhomeicon.png; sourceTree = "<group>"; };
 		9FF6282E1AE4CBDF000DA334 /* KLCPopup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KLCPopup.h; sourceTree = "<group>"; };
 		9FF6282F1AE4CBDF000DA334 /* KLCPopup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KLCPopup.m; sourceTree = "<group>"; };
 		9FF628311AE4CDE9000DA334 /* ViewSelectCountryNLanguage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ViewSelectCountryNLanguage.h; path = Gizmeondeals/ViewSelectCountryNLanguage.h; sourceTree = "<group>"; };
@@ -314,8 +310,6 @@
 		B9B2F6411A9CA566004B40D2 /* SignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignUpViewController.h; sourceTree = "<group>"; };
 		B9B2F6421A9CA566004B40D2 /* SignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignUpViewController.m; sourceTree = "<group>"; };
 		B9D6CCC71AB6D56F00DF9508 /* buynow1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = buynow1.png; sourceTree = "<group>"; };
-		B9D6CCC91AB6D8D600DF9508 /* homeicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = homeicon.png; sourceTree = "<group>"; };
-		B9D6CCCA1AB6D8D600DF9508 /* karticon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = karticon.png; sourceTree = "<group>"; };
 		B9D6CCCB1AB6D8D600DF9508 /* moreicon1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = moreicon1.png; sourceTree = "<group>"; };
 		B9D6CCCC1AB6D8D600DF9508 /* usericon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = usericon.png; sourceTree = "<group>"; };
 		B9D6CCCD1AB6D8D600DF9508 /* wishlisticon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wishlisticon.png; sourceTree = "<group>"; };
@@ -487,8 +481,6 @@
 				9F4738751ABADB7E00BA0EEB /* lanqatar1.png */,
 				9F4738761ABADB7E00BA0EEB /* rateus1.png */,
 				9F4738771ABADB7E00BA0EEB /* twitter1.png */,
-				B9D6CCC91AB6D8D600DF9508 /* homeicon.png */,
-				B9D6CCCA1AB6D8D600DF9508 /* karticon.png */,
 				B9D6CCCB1AB6D8D600DF9508 /* moreicon1.png */,
 				B9D6CCCC1AB6D8D600DF9508 /* usericon.png */,
 				B9D6CCCD1AB6D8D600DF9508 /* wishlisticon.png */,
@@ -651,11 +643,11 @@
 		335885741AE123A100A814F0 /* tabbaricons */ = {
 			isa = PBXGroup;
 			children = (
+				9FECAE841AF0AB4F003C273A /* mycarticon.png */,
+				9FECAE851AF0AB4F003C273A /* myhomeicon.png */,
 				333D627E1AEDF1B900A8960E /* grid.png */,
 				333D627F1AEDF1B900A8960E /* table.png */,
 				333C46781AEA14A60017A618 /* myaccounticon.png */,
-				333C46791AEA14A60017A618 /* mycarticon.png */,
-				333C467A1AEA14A60017A618 /* myhomeicon.png */,
 				333C467B1AEA14A60017A618 /* myoverflowicon.png */,
 				333C467C1AEA14A60017A618 /* mywishlisticon.png */,
 			);
@@ -803,7 +795,6 @@
 				3318D6791A70C9AF003B60D6 /* cart.png in Resources */,
 				B99F0E7B1AA0403500C575DE /* logo2.png in Resources */,
 				3318D6711A70C575003B60D6 /* DealstableviewcellTableViewCell.xib in Resources */,
-				B9D6CCCF1AB6D8D600DF9508 /* karticon.png in Resources */,
 				9F47387A1ABADB7E00BA0EEB /* call.png in Resources */,
 				333C46801AEA14A60017A618 /* myoverflowicon.png in Resources */,
 				3318D7691A7F465B003B60D6 /* home.png in Resources */,
@@ -824,10 +815,11 @@
 				9F47387C1ABADB7E00BA0EEB /* facebook1.png in Resources */,
 				3318D5F61A70B5F4003B60D6 /* Images.xcassets in Resources */,
 				9F47387B1ABADB7E00BA0EEB /* contact1.png in Resources */,
-				B9D6CCCE1AB6D8D600DF9508 /* homeicon.png in Resources */,
 				3318D6731A70C70D003B60D6 /* logo.png in Resources */,
 				9F4738811ABADB7E00BA0EEB /* lanqatar1.png in Resources */,
 				9F4738801ABADB7E00BA0EEB /* language.png in Resources */,
+				9FECAE871AF0AB4F003C273A /* myhomeicon.png in Resources */,
+				9FECAE861AF0AB4F003C273A /* mycarticon.png in Resources */,
 				3318D7711A7F4BAE003B60D6 /* information.png in Resources */,
 				3318D7321A727631003B60D6 /* rightarrow.png in Resources */,
 				3318D5E81A70B5F4003B60D6 /* InfoPlist.strings in Resources */,

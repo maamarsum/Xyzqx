@@ -128,7 +128,12 @@ CGRect frameForReusableView;
     
     float viewProductTableHeight = productList.count * reusableViewHeight;
     
-    NSString *totalPrice =  [self getTotalPrice];
+    float subTotalFloatVal=0;
+    
+    NSString *subTotal;
+    NSString *grandTotal;
+    
+    
     
     frameForReusableView = CGRectMake(0, 0, viewProductTable.frame.size.width, reusableViewHeight);
     
@@ -143,6 +148,24 @@ CGRect frameForReusableView;
         
         
         
+        osrView.lableProductName.text = item.productName;
+        osrView.labelProductPrice.text = item.productPrice;
+        osrView.labelProductModel.text = item.productModel;
+        osrView.lablelProductQuantity.text = item.productCartNumberOfItems;
+        
+        float numberOfItems = [item.productCartNumberOfItems floatValue];
+        
+        float total = [item.productPrice floatValue] * numberOfItems;
+        
+        
+        subTotalFloatVal = subTotalFloatVal+total;
+        
+        osrView.labelTotalPrice.text = [NSString stringWithFormat:@"%0.2f" ,total];
+        
+        
+        
+        
+        
         [viewProductTable addSubview:osrView];
         
         frameForReusableView.origin.y = frameForReusableView.origin.y+reusableViewHeight;
@@ -150,10 +173,11 @@ CGRect frameForReusableView;
         
         
     }
+    subTotal = [NSString stringWithFormat:@"QR %0.2f",subTotalFloatVal];
     
-    _labelSubTotal.text = totalPrice;
-    _labelShippingRate.text = 0;
-    _labelTotal.text = totalPrice;
+    _labelSubTotal.text = subTotal;
+    _labelShippingRate.text = @"0";
+    _labelTotal.text = subTotal;
     
     
     viewProductTable.frame = CGRectMake(viewProductTable.frame.origin.x, viewProductTable.frame.origin.y, viewProductTable.frame.size.width, viewProductTableHeight);
@@ -166,7 +190,7 @@ CGRect frameForReusableView;
     
    
     
-    frameViewTotal.origin.y = viewProductTable.frame.origin.y + viewProductTable.frame.size.height + 10 ;
+    frameViewTotal.origin.y = viewProductTable.frame.origin.y + viewProductTable.frame.size.height + 5 ;
     
     
     viewTotals.frame = frameViewTotal;

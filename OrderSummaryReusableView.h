@@ -11,7 +11,7 @@
 @interface OrderSummaryReusableView : UIView
 @property (strong, nonatomic) IBOutlet UIView *view;
 @property (weak, nonatomic) IBOutlet UIView *contentView;
-@property (weak, nonatomic) IBOutlet UIView *lableProductName;
+@property (weak, nonatomic) IBOutlet UILabel *lableProductName;
 
 @property (weak, nonatomic) IBOutlet UILabel *labelProductModel;
 @property (weak, nonatomic) IBOutlet UILabel *labelProductPrice;
